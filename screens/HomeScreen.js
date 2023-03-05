@@ -1,30 +1,56 @@
 import { View, Text, TextInput, Image } from 'react-native'
-import React, { useLayoutEffect } from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { TouchableOpacity } from 'react-native';
 import { BellIcon, BookmarkIcon, BriefcaseIcon, CalendarIcon, ChatBubbleLeftIcon, EllipsisVerticalIcon, HomeIcon, MagnifyingGlassIcon, PlayIcon, ShoppingBagIcon, SparklesIcon, StarIcon, UserIcon } from "react-native-heroicons/solid";
 import { ScrollView } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import Spinner from 'react-native-loading-spinner-overlay';
 
 
 const HomeScreen = () => {
   const navigation = useNavigation();
+  const [loading, setLoading] = useState(true);
+
+  
 
   useLayoutEffect(()=>
     navigation.setOptions({
         headerShown: false,
     })
+    
     )
+    useEffect(()=>{
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000)
+    })
     const Tab = createBottomTabNavigator();
+
+    
+
+    
+
+
+
   return (
 <View className="h-full">
+  
 
       {/* header */}
+      <Spinner
+          //visibility of Overlay Loading Spinner
+          visible={loading}
+          //Text with the Spinner
+          textContent={'Loading...'}
+          //Text style of the Spinner Text
+          
+        />
 
       <View className="pt-16 pb-4 flex-row bg-white items-center pl-5 justify-between  ">
-        <TouchableOpacity>
+        <TouchableOpacity
+         >
           <View className="h-10 w-10  bg-[#D3D3D3] rounded-lg">
           <View className="h-4 w-4 rounded-full  bg-green-500 absolute right-0">
             <Text className="text-center"></Text>

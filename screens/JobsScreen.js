@@ -1,14 +1,19 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native'
-import React, { useLayoutEffect } from 'react'
+import React, { useCallback, useLayoutEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { ArrowLeftIcon,  BellIcon,  BriefcaseIcon,  ChatBubbleLeftIcon, EllipsisVerticalIcon, HomeIcon, MagnifyingGlassIcon, UserIcon } from 'react-native-heroicons/solid';
 import { TextInput } from 'react-native-paper';
 import {BookmarkIcon} from 'react-native-heroicons/outline'
 import { ScrollView } from 'react-native';
+import { FancyAlert } from 'react-native-expo-fancy-alerts';
 
 const JobsScreen = () => {
 
     const navigation = useNavigation();
+    const [visible, setVisible] = useState(true);
+  const toggleAlert = useCallback(() => {
+    setVisible(!visible);
+  }, [visible]);
 
   useLayoutEffect(()=>
     navigation.setOptions({
@@ -17,9 +22,29 @@ const JobsScreen = () => {
     )
   return (
     <View className="h-full">
+      <FancyAlert
+        visible={visible}
+        icon={<View style={{
+          flex: 1,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: '#d3d3d3',
+          borderRadius: 40,
+          width: '100%',
+        }}><Text>🥳</Text></View>}
+        style={{ backgroundColor: 'white' }}
+      >
+        <Text>This is a POPUP</Text>
+        <TouchableOpacity onPress={()=>{toggleAlert()}}>
+          <Text className="pb-8 text-red-400 pt-5">Close</Text>
+          </TouchableOpacity> 
+
+      </FancyAlert>
       <View className="pb-8">
       <View className="pt-16 pb-4 flex-row bg-white items-center pl-5 justify-between  ">
-        <TouchableOpacity>
+        <TouchableOpacity
+        onPress={()=>{navigation.navigate("Home")}}>
           <ArrowLeftIcon color={"#244b65"} size={30}/>
         </TouchableOpacity >
         <Text className="text-xl pl-4">Jobs</Text>
@@ -27,7 +52,7 @@ const JobsScreen = () => {
         <TouchableOpacity onPress={()=>{navigation.navigate("Chat")}}>
         <ChatBubbleLeftIcon color={"#D3D3D3"} size={30}/>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity >
           <EllipsisVerticalIcon  size={30} color={"#244b65"}/>
         </TouchableOpacity>
         </View>

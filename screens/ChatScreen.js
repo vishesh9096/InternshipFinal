@@ -17,7 +17,8 @@ const ChatScreen = () => {
     <View className="flex h-full">
     <View className="">
     <View className="pt-16 pb-4 flex-row bg-white items-center pl-5 justify-between  ">
-        <TouchableOpacity>
+        <TouchableOpacity
+        onPress={()=>{navigation.navigate("Home")}}>
           <ArrowLeftIcon color={"#244b65"} size={30}/>
         </TouchableOpacity >
         <Text className="text-xl pl-4">Messages</Text>
