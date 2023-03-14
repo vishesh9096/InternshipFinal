@@ -16,11 +16,16 @@ import {
 import PhoneInput from "react-native-phone-number-input";
 import RadioGroup from 'react-native-radio-buttons-group';
 import Checkbox from 'expo-checkbox';
-
+import * as DocumentPicker from "expo-document-picker";
 
 
 
 const RegisterScreen = () => {
+    const pickDocument = async () => {
+        let result = await DocumentPicker.getDocumentAsync({});
+        console.log(result.uri);
+        console.log(result);
+      };
     const navigation = useNavigation();
     const [isChecked, setChecked] = useState(false);
     const [radioButtons, setRadioButtons] = useState([
@@ -124,9 +129,11 @@ const RegisterScreen = () => {
                 
                 </View>
                 <View className="w-88 border  h-9 flex-row items-center rounded-2xl">
-                    <View className="h-9 bg-blue-400 w-32 flex items-center rounded-2xl">
+                    <TouchableOpacity 
+                    onPress={()=>{pickDocument()}}
+                    className="h-9 bg-blue-400 w-32 flex items-center rounded-2xl">
                         <Text className="text-white font-bold pt-2 ">Upload Resume</Text>
-                    </View>
+                    </TouchableOpacity>
                     <View className="flex-row items-center pl-2">
                         <Text className="text-gray-500 ">DOC,DOCx,PDF |</Text>
 
