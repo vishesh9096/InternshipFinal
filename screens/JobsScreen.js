@@ -289,30 +289,7 @@ const JobsScreen = () => {
     </ScrollView>
 
 
-    <View className="absolute bottom-0    space-x-16 justify-center  bg-white w-full pt-3    flex-row  h-20">
     
-    <TouchableOpacity className="flex items-center"
-    onPress={()=>{navigation.navigate("Home")}}
-    >
-      <HomeIcon size={36} color={"#0A2647"}/>
-
-    </TouchableOpacity>
-    <TouchableOpacity className="flex items-center" onPress={()=>{navigation.navigate("Jobs")}}>
-      <BriefcaseIcon size={36} color={"#0A2647"}/>
-
-    </TouchableOpacity>
-    <TouchableOpacity className="flex items-center" onPress={()=>{navigation.navigate("Notify")}}>
-      <BellIcon size={36} color={"#0A2647"}/>
-
-    </TouchableOpacity>
-    <TouchableOpacity onPress={()=>{
-      navigation.navigate("Interview");
-    }} className="flex items-center">
-      <UserIcon size={36} color={"#0A2647"}/>
-
-    </TouchableOpacity>
-    
-</View>
       
 
 

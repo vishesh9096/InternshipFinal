@@ -47,7 +47,9 @@ const InterviewScreen = () => {
       <Text className="text-center pt-4 text-gray-500">3 interviews to go</Text>
 
       <ScrollView horizontal={true} className="px-4  gap-x-5 pt-4">
-        <TouchableOpacity className="bg-white h-48 rounded-2xl shadow-md flex items-center shadow-black w-40">
+        <TouchableOpacity 
+        onPress={()=>{navigation.navigate("JobDetails")}}
+        className="bg-white h-48 rounded-2xl shadow-md flex items-center shadow-black w-40">
             <View className="pt-4">
               <Image 
               className="h-20 rounded-xl w-20"
@@ -62,7 +64,9 @@ const InterviewScreen = () => {
             </View>
         </TouchableOpacity>
 
-        <TouchableOpacity className="bg-white h-48 rounded-2xl shadow-md flex items-center shadow-black w-40">
+        <TouchableOpacity
+        onPress={()=>{navigation.navigate("JobDetails")}}
+         className="bg-white h-48 rounded-2xl shadow-md flex items-center shadow-black w-40">
             <View className="pt-4">
               <Image 
               className="h-20 rounded-xl w-20"
@@ -77,7 +81,9 @@ const InterviewScreen = () => {
             </View>
         </TouchableOpacity>
 
-        <TouchableOpacity className="bg-white h-48 rounded-2xl shadow-md flex items-center shadow-black w-40">
+        <TouchableOpacity 
+        onPress={()=>{navigation.navigate("JobDetails")}}
+        className="bg-white h-48 rounded-2xl shadow-md flex items-center shadow-black w-40">
             <View className="pt-4">
               <Image 
               className="h-20 rounded-xl w-20"
@@ -184,30 +190,7 @@ const InterviewScreen = () => {
  </ScrollView>
 
 
- <View className="absolute bottom-0    space-x-16 justify-center  bg-white w-full pt-3    flex-row  h-20">
-    
-    <TouchableOpacity className="flex items-center"
-    onPress={()=>{navigation.navigate("Home")}}
-    >
-      <HomeIcon size={36} color={"#0A2647"}/>
 
-    </TouchableOpacity>
-    <TouchableOpacity className="flex items-center" onPress={()=>{navigation.navigate("Jobs")}}>
-      <BriefcaseIcon size={36} color={"#0A2647"}/>
-
-    </TouchableOpacity>
-    <TouchableOpacity className="flex items-center" onPress={()=>{navigation.navigate("Notify")}}>
-      <BellIcon size={36} color={"#0A2647"}/>
-
-    </TouchableOpacity>
-    <TouchableOpacity onPress={()=>{
-      navigation.navigate("Interview");
-    }} className="flex items-center">
-      <UserIcon size={36} color={"#0A2647"}/>
-
-    </TouchableOpacity>
-    
-</View>
       
 
 

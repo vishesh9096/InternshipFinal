@@ -16,6 +16,7 @@ import ChatScreen from './screens/ChatScreen';
 import BrowseJobsScreen from './screens/BrowseJobsScreen';
 import SearchScreen from './screens/SearchScreen';
 import JobDetailsScreen from './screens/JobDetailsScreen';
+import BottomTabScreen from './screens/navigations/BottomTabScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,14 +27,15 @@ export default function App() {
     <NavigationContainer>
     <TailwindProvider>
     <Stack.Navigator>
+    <Stack.Screen name="BottomTab" component={BottomTabScreen}/>
     <Stack.Screen name="Login" component={LoginScreen}/>
     <Stack.Screen name="JobDetails" component={JobDetailsScreen}/>
     <Stack.Screen name="Search" component={SearchScreen}/>
     <Stack.Screen name="BrowseJobs" component={BrowseJobsScreen}/>
-    <Stack.Screen name="Home" component={HomeScreen}/>
-    <Stack.Screen name="Jobs" component={JobsScreen}/>
-    <Stack.Screen name="Notify" component={NotifyScreen}/>
-    <Stack.Screen name="Interview" component={InterviewScreen}/>
+    
+    
+    
+
     <Stack.Screen name="Create" component={CreateScreen}/>
     <Stack.Screen name="Register" component={RegisterScreen}/>
     
