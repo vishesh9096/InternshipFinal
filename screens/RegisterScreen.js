@@ -153,7 +153,9 @@ const RegisterScreen = () => {
 
                 <View className="pt-6 ">
                     <Text className="text-xs pl-1 pb-3 ">By clicking you agree to Terms,Conditions & Privacy Policy</Text>
-                    <TouchableOpacity className="w-full h-9 flex items-center rounded-xl border border-blue-600 bg-blue-400">
+                    <TouchableOpacity
+                    onPress={()=>{navigation.navigate("Login")}}
+                    className="w-full h-9 flex items-center rounded-xl border border-blue-600 bg-blue-400">
                         <Text className="pt-1 text-white text-lg font-semibold">Register</Text>
 
                     </TouchableOpacity>

@@ -64,7 +64,7 @@ const LoginScreen = () => {
                 </TouchableOpacity>
                 <View className="pt-8 ">
                     <TouchableOpacity 
-                    onPress={()=>{navigation.navigate("Home")}}
+                    onPress={()=>{navigation.navigate("BottomTab")}}
                     className="w-full h-9 flex items-center  border border-blue-600 bg-blue-400">
                         <Text className="pt-1 text-white text-lg font-semibold">Login</Text>
 

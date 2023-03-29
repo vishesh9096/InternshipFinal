@@ -27,8 +27,8 @@ export default function App() {
     <NavigationContainer>
     <TailwindProvider>
     <Stack.Navigator>
-    <Stack.Screen name="BottomTab" component={BottomTabScreen}/>
     <Stack.Screen name="Login" component={LoginScreen}/>
+    <Stack.Screen name="BottomTab" component={BottomTabScreen}/>
     <Stack.Screen name="JobDetails" component={JobDetailsScreen}/>
     <Stack.Screen name="Search" component={SearchScreen}/>
     <Stack.Screen name="BrowseJobs" component={BrowseJobsScreen}/>
