@@ -34,7 +34,7 @@ const JobDetailsScreen = () => {
 
 
             <ScrollView className="mx-4 pt-4">
-                <View className="pt-20 pb-6">
+                <View className="pt-20 pb-6 flex items-center">
                 <View className="bg-white w-full h-56 rounded-2xl">
                     <Text className="text-center text-xl font-bold text-[#244b65] pt-16">Marketing Analyst</Text>
                     <Text className="text-center  font-semibold text-gray-400 pt-2">Company Name</Text>
@@ -60,7 +60,7 @@ const JobDetailsScreen = () => {
                     </View>
 
                 </View>
-                    <View className="w-28 h-28 rounded-2xl bg-gray-200 absolute top-4 left-36 pl-2 "></View>
+                    <View className="w-28 h-28 rounded-2xl bg-gray-200 absolute  top-4 justify-center pl-2 "></View>
                 </View>
 
                 <View className="w-full bg-white rounded-xl">

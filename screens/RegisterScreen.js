@@ -61,9 +61,9 @@ const RegisterScreen = () => {
   return (
     
         <ScrollView className="bg-white px-8 pt-16">
-            <View className=" flex-row ">
+            <View className=" flex-row items-center justify-between ">
                 <Text className="text-3xl text-[#244b65] font-semibold text-">Register</Text>
-                <View className=" pb-1 pl-36  ">
+                <View className=" pb-1   ">
                     <TouchableOpacity onPress={()=>{
 
                     }}>
@@ -82,7 +82,7 @@ const RegisterScreen = () => {
                 <Text className="pl-2 font-semibold text-[#244b65]">Full Name</Text>
                 <View className="pt-1">
                 <TextInput placeholder='Enter full name' 
-                className="bg-white text-xl pl-2 border  w-80 h-10 rounded-xl"  />
+                className="bg-white text-xl pl-2 border  w-full h-10 rounded-xl"  />
 
                 </View>
                 </View>
@@ -92,7 +92,7 @@ const RegisterScreen = () => {
                 <Text className="pl-2 font-bold text-[#244b65]">Email Id</Text>
                 <View className="pt-1">
                 <TextInput placeholder='Enter email-id' 
-                className="bg-white text-xl pl-2 border  w-80 h-10 rounded-xl"  />
+                className="bg-white text-xl pl-2 border  w-full h-10 rounded-xl"  />
                 </View>
                 </View>
 
@@ -101,7 +101,7 @@ const RegisterScreen = () => {
                 <Text className="pl-2 font-bold text-[#244b65]">Password</Text>
                 <View className="pt-1">
                 <TextInput placeholder='Enter password' secureTextEntry={true}
-                className="bg-white text-xl pl-2 border  w-80 h-10 rounded-xl"  />
+                className="bg-white text-xl pl-2 border  w-full h-10 rounded-xl"  />
                 </View>
                 </View>
 
@@ -111,7 +111,7 @@ const RegisterScreen = () => {
                 <View className="  ">
                 <PhoneInput
                 defaultValue={value} defaultCode="IN" onChangeFormattedText={(text) => {setValue(text); }}
-                layout="first" autoFocus containerStyle={{ backgroundColor: 'white',borderWidth:0.5,borderColor:"gray",borderRadius:2,height:40,width:320 }} inputStyle={{borderWidth:0.5, backgroundColor: 'white' }} textContainerStyle={{borderWidth:0.1,backgroundColor:"white" ,paddingBottom:0,paddingTop:0 }}
+                layout="first" autoFocus containerStyle={{ backgroundColor: 'white',borderWidth:0.5,borderColor:"gray",borderRadius:2,height:40,width:360 }} inputStyle={{borderWidth:0.5, backgroundColor: 'white' }} textContainerStyle={{borderWidth:0.1,backgroundColor:"white" ,paddingBottom:0,paddingTop:0 }}
                 />
                 </View>
                 </View>
@@ -182,6 +182,7 @@ const RegisterScreen = () => {
                     </TouchableOpacity>
                 </View>
             </View>
+            <View className="h-32"></View>
             </ScrollView>
             
           
